@@ -30,6 +30,19 @@ def delete():
     if flag:
         myDictionary.close()
         print("The word you wanna delete is not found in the dictionary.")
+        
+
+def addWord():
+    print("please enter the Word: ")
+    word = input()
+    word = word.lstrip().rsplit()[0]
+    print("Please enter the Meaning of the Word you enterer: ")
+    Meaning = input()
+    dataFile = open('./dictionary.txt','a') 
+    line = f"{word}:{Meaning}\n"
+    dataFile.writelines(line)
+    print(f"{bcolors.OKGREEN}Your word has been added successfully...{bcolors.ENDC}")
+
  
 
 
