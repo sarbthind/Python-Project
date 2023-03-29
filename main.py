@@ -14,14 +14,14 @@ class bcolors:
 
 def delete():
     print("Enter the word you wanna delete: \n")
-    wordToDelete = input()
+    wordToDelete = input()  # getting inpur from user
     myDictionary = open("./dictionary.txt", "r")
     allWords = myDictionary.readlines()
     flag = True
     for x in allWords:
         if f"{wordToDelete}:" in x:
             allWords.remove(x)
-            dataFile = open('./dictionary.txt',"w")
+            dataFile = open('./dictionary.txt',"w")  #  writing into file.
             dataFile.writelines(allWords)
             dataFile.close()
             print(f"{bcolors.WARNING}Your given word deleted successfully.")
