@@ -46,3 +46,14 @@ def addWord():
  
 
 
+
+def operate(num):
+    if num == 'c':
+        searchWord()
+    elif num == "a":
+        addWord()
+    else:
+        print("You again entered the wrong code. please enter again press a or c.")
+        num = input()
+        operate(num)
+
