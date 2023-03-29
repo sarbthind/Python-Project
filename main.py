@@ -46,7 +46,7 @@ def addWord():
  
 
 
-
+# operate function.....
 def operate(num):
     if num == 'c':
         searchWord()
